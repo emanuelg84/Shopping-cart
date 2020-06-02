@@ -25,15 +25,25 @@ products = [
 #for p in products:
  #   print("$"+"{:.2f}".format(p["price"]))
 
+total_price = 0
+selected_IDs=[]
+
 while True:
     Prodcut_ID = input("Please input a product identifier or 'DONE' if there are no other products: ")
     if Prodcut_ID == "DONE":
         break
     else:
-        matching_products=[p for p in products if str(p["id"])==str(Prodcut_ID)]
-        matching_product=matching_products[0]
-        print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
+        selected_IDs.append(Prodcut_ID)
 
+print(selected_IDs)
+
+#for Prodcut_ID in selected_IDs:
+    #matching_products=[p for p in products if str(p["id"])==str(Prodcut_ID)]
+    #matching_product=matching_products[0]
+    #total_price=total_price+matching_product["price"]
+    #print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
+
+#print("Your total is: " + str(total_price))
 
 
 
