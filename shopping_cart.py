@@ -23,4 +23,9 @@ products = [
 
 
 #for p in products:
-    #print("$"+"{:.2f}".format(p["price"]))  Printing all prices in desired format
+ #   print("$"+"{:.2f}".format(p["price"]))
+
+Prodcut_ID=input("Please input a product identifier or 'DONE' if there are no other products")
+
+
+
