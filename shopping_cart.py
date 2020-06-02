@@ -26,6 +26,10 @@ products = [
  #   print("$"+"{:.2f}".format(p["price"]))
 
 Prodcut_ID=input("Please input a product identifier or 'DONE' if there are no other products")
+matching_products = [p for p in products if str(p["id"])==str(Prodcut_ID)]
 
+matching_product = matching_products[0]
+
+print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
 
 
