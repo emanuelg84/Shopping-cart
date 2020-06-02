@@ -30,8 +30,17 @@ while True:
     if Prodcut_ID == "DONE":
         break
     else:
-    matching_products = [p for p in products if str(p["id"])==str(Prodcut_ID)]
-    matching_product = matching_products[0]
-    print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
+        matching_products=[p for p in products if str(p["id"])==str(Prodcut_ID)]
+        matching_product=matching_products[0]
+        print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
+
+
+
+
+
+
+
+
+   
 
 
