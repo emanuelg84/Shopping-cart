@@ -22,12 +22,16 @@ products = [
 ]
 
 
-#for p in products:
- #   print("$"+"{:.2f}".format(p["price"]))
+
+import datetime
+import operator
+today=datetime.datetime.now()
+
+
 
 total_price = 0
 selected_IDs=[]
-
+print("WELCOME TO SPRING ST. GROCERY")
 while True:
     Prodcut_ID = input("Please input a product identifier or 'DONE' if there are no other products: ")
     if Prodcut_ID == "DONE":
@@ -35,18 +39,34 @@ while True:
     else:
         selected_IDs.append(Prodcut_ID)
 
-print(selected_IDs)
 
-#for Prodcut_ID in selected_IDs:
-    #matching_products=[p for p in products if str(p["id"])==str(Prodcut_ID)]
-    #matching_product=matching_products[0]
-    #total_price=total_price+matching_product["price"]
-    #print("Selected product: "+matching_product["name"] + " " +str(matching_product["price"]))
+print(" ")
+print(" ")
+print(" ")
+print("---------------------------------")
+print("SPRING STREET GROCERY")
+print("---------------------------------")
+print("Check out at: ",str(today))
+print("---------------------------------")
+print("Your selected products are:")
 
-#print("Your total is: " + str(total_price))
+for Prodcut_ID in selected_IDs:
+    matching_products=[p for p in products if str(p["id"])==str(Prodcut_ID)]
+    matching_product=matching_products[0]
+    total_price=total_price+matching_product["price"]
+    print("+ "+matching_product["name"] + " " +"$"+"{:.2f}".format(matching_product["price"]))
 
+print("---------------------------------")
 
+print("SUBTOTAL: " +"$"+"{:.2f}".format(total_price))
+sales_tax=total_price*0.0825
+print("TAX: "+"$"+"{:.2f}".format(sales_tax))
 
+grand_total=sales_tax+total_price
+print("TOTAL: "+"$"+"{:.2f}".format(grand_total))
+print("---------------------------------")
+print("---THANKS FOR SHOPPING WITH US---")
+print("---------------------------------")
 
 
 
